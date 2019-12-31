@@ -1,4 +1,5 @@
 import React from 'react';
+import Router from 'next/router';
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -11,7 +12,7 @@ import Paper from '@material-ui/core/Paper';
 const useStyles = makeStyles({ row: { cursor: 'pointer' } });
 
 export default ({ incidents }) => {
-  const goToDetails = () => alert('details');
+  const goToDetails = id => () => Router.push('/incidents/[id]', `/incidents/${id}`);
   const styles = useStyles();
 
   return (
@@ -28,7 +29,12 @@ export default ({ incidents }) => {
         </TableHead>
         <TableBody>
           {incidents.map(incident => (
-            <TableRow key={incident.description.event_id} className={styles.row} hover onClick={goToDetails}>
+            <TableRow
+              key={incident.description.event_id}
+              className={styles.row}
+              hover
+              onClick={goToDetails(incident.description.incident_number)}
+            >
               <TableCell>{incident.address.city}</TableCell>
               <TableCell align="right">{incident.apparatus.length}</TableCell>
               <TableCell>{incident.description.type}</TableCell>
