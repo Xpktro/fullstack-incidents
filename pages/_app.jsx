@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import { withStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
@@ -8,7 +9,7 @@ import dynamic from 'next/dynamic';
 
 const styles = {
   appBar: { marginBottom: '1rem' },
-  title: { flexGrow: 1 },
+  title: { flexGrow: 1, cursor: 'pointer' },
 };
 
 const App = ({ Component, pageProps, classes }) => (
@@ -24,9 +25,11 @@ const App = ({ Component, pageProps, classes }) => (
 
     <AppBar position="static" className={classes.appBar}>
       <Toolbar>
-        <Typography variant="h6" className={classes.title}>
-          911 Incidents
+        <Link href="/">
+          <Typography variant="h6" className={classes.title}>
+            911 Incidents
         </Typography>
+        </Link>
       </Toolbar>
     </AppBar>
 
