@@ -1,0 +1,17 @@
+{
+  "name": "fullstack-incidents",
+  "version": "1.0.0",
+  "description": "Enriches 911 emergency incident data to provide better analytics for a fire department.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "next": "^9.1.6",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
