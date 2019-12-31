@@ -42,6 +42,10 @@ Once you see the following message you will be able to see the project by naviga
 # Usage
 UI should be pretty straightforward to use, select any row on the table or click on any popup once a marker has been clicked to make it appear. You'll be taken to the second, detail screen.
 
+![](https://raw.githubusercontent.com/Xpktro/fullstack-incidents/master/screenshots/incidents-master.png)
+
+![](https://raw.githubusercontent.com/Xpktro/fullstack-incidents/master/screenshots/incidents-detail.png)
+
 If you want to modify the data the API serves, just add/delete/modify the contents of the `data` folder. Every file in this folder will be treated as JSON and will be served in two endpoints: `/api/incidents` (list all documents) and `/api/incidents/:id` (individual incident detail)
 
 # Development Notes
