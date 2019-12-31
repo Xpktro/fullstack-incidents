@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { withStyles } from '@material-ui/core/styles';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import dynamic from 'next/dynamic';
 
@@ -21,11 +20,6 @@ const styles = theme => ({
     flexGrow: 1,
     justifyContent: 'center',
     margin: '0 auto'
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    color: theme.palette.text.primary,
   },
 });
 
